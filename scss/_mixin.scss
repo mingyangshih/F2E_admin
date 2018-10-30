@@ -1,0 +1,154 @@
+$font: "Helvetica Nueue", Arial, Sans Serif;
+
+%date {
+  color: #9b9b9b;
+  border: 0px solid white;
+  display: inline-block;
+  vertical-align: top;
+}
+%block-bg {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 5px #ebebeb;
+  border-radius: 3px;
+}
+@mixin text-hide {
+  white-space: nowrap;
+  text-indent: 100%;
+  overflow: hidden;
+}
+// overview footer extand
+%footer-left {
+  width: 385px;
+  margin: 0 auto;
+  border-bottom: 1px solid #ebebeb;
+  box-sizing: border-box;
+  margin-bottom: 23px;
+  position: relative;
+  i.fab {
+    font-size: 45px;
+    color: black;
+    display: inline-block;
+    margin-bottom: 24px;
+  }
+  .url {
+    color: #9b9b9b;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 16px;
+  }
+  .num {
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 15px;
+    margin-right: 20px;
+    font-weight: bold;
+  }
+  .fas {
+    color: #7ed321;
+    font-size: 18px;
+    vertical-align: top;
+    margin-top: 16px;
+    margin-right: 8px;
+    font-weight: bold;
+  }
+  .percent {
+    color: #7ed321;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 17px;
+    font-weight: bold;
+  }
+  .detail {
+    display: none;
+    position: absolute;
+    left: 256px;
+    top: -88px;
+    background: #000000;
+    border-radius: 3px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    width: 186px;
+    height: 88px;
+    box-sizing: border-box;
+    padding-top: 20px;
+    span {
+      color: #7ed321;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .this-week {
+      line-height: 24px;
+      margin-bottom: 8px;
+    }
+    .last-week {
+      color: #9b9b9b;
+    }
+  }
+}
+.detail.show {
+  display: inherit;
+}
+//checkbox
+@mixin checkbox {
+  input[type="checkbox"] {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 0;
+    outline: none !important;
+    -webkit-appearance: normal;
+    margin-left: 58px;
+    margin-right: 5px;
+    margin-bottom: 11px;
+    margin-top: 2px;
+    box-sizing: border-box;
+  }
+
+  input[type="checkbox"]::after {
+    display: inline-block;
+    content: "✔";
+    width: 15px;
+    height: 15px;
+    background: white;
+    vertical-align: middle;
+    border-radius: 2px;
+    color: white;
+    padding-left: 1.5px;
+    line-height: 14.5px;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+    margin-top: -2px;
+  }
+
+  input[type="checkbox"]:checked::after {
+    background: #000000;
+  }
+}
+//  td p setup
+%tdp {
+  p {
+    display: block;
+    text-align: center;
+  }
+}
+
+// 用for 設定寬度
+@mixin width {
+  $width: 65px 145px 126px 60px 100px 90px 124px 65px 65px 100px;
+  $class: "id" "customer" "productlist" "total" "addtime" "checktime" "address"
+    "phone" "email" "status";
+  @for $i from 1 through 10 {
+    .table {
+      tr .#{nth($class,$i)} {
+        width: nth($width, $i);
+      }
+      tr th:nth-child(#{$i}) {
+        width: nth($width, $i);
+      }
+    }
+  }
+}

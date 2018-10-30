@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 使用編碼 -->
+    <meta charset="UTF-8">
+    <!-- 頁籤設定 -->
+    <title>F2E ADMIN</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <!-- RWD -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ie-edge 版本兼容 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--網站貼在Facebook上時顯示的資訊-->
+    <meta property="og:title" content="TheF2E Week3: Admin">
+    <meta property="og:description" content="Ming Yang's F2E 3th homework">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="images/F2E.jpg">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/order_use.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <nav class="nav-list">
+            <h1>Shoptime</h1>
+            <a href="index.html" class="home">HOME</a>
+            <a href="order.html" class="orders">ORDERS</a>
+            <a href="#">PRODUCT</a>
+            <h3 href="#" class="admin">ADMIN</h3>
+        </nav>
+        <header class="orderheader">
+            <h2>orders</h2>
+            <input type="checkbox" class="headerinput">
+            <i class="fas fa-caret-down"></i>
+            <i class="fas fa-tags"></i>
+            <p class="editsection">EDIT SECTION</p>
+            <i class="fas fa-caret-down second"></i>
+            <div class="selectoption">
+                <p>Select All</p>
+                <p>Unselect All</p>
+                <p>Paid</p>
+                <p>Unpaid</p>
+                <p>Shipping</p>
+                <p>Done</p>
+            </div>
+            <div class="tagoption">
+                <p>Paid</p>
+                <p>Unpaid</p>
+                <p>Shipping</p>
+                <p>Done</p>
+            </div>
+            <ul class="editoption">
+                <li>
+                    <input type="checkbox" data-num="0" checked>
+                    <label>Order ID</label>
+                </li>
+                <li>
+                    <input type="checkbox" data-num="1" checked>
+                    <label>Customer</label>
+                </li>
+                <li>
+                    <input type="checkbox" data-num="2" checked>
+                    <label>Product List</label>
+                </li>
+                <li>
+                    <input type="checkbox" data-num="3" checked>
+                    <label>Total</label>
+                </li>
+                <li>
+                    <input type="checkbox" data-num="4" checked>
+                    <label>Add to Cart</label>
+                </li>
+                <li>
+                    <input type="checkbox" data-num="5" checked>
+                    <label>Check-out</label>
+                </li>
+                <li>
+                    <input type="checkbox" data-num="6" checked>
+                    <label>Address</label>
+                </li>
+                <li>
+                    <input type="checkbox" data-num="7" checked>
+                    <label>Phone</label>
+                </li>
+                <li>
+                    <input type="checkbox" data-num="8" checked>
+                    <label>Email</label>
+                </li>
+                <li>
+                    <input type="checkbox" data-num="9" checked>
+                    <label>Status</label>
+                </li>
+            </ul>
+        </header>
+        <table class="table">
+            <tr class="table-title">
+                <th class="id">Order ID</th>
+                <th class="customer">Customer</th>
+                <th class='list'>Product List</th>
+                <th class="total">Total</th>
+                <th class="carttime">Add to Cart</th>
+                <th class="checkout">Check-out</th>
+                <th class="address">Address</th>
+                <th class="phone">Phone</th>
+                <th class="email">Email</th>
+                <th class="status">Status</th>
+            </tr>
+            <tr class="table-content" data-product=0>
+                <td class="id"></td>
+                <td class="customer">
+                    <input type="checkbox">
+                    <p>Ian Medina</p>
+                </td>
+                <td class="productlist">
+                    <p class="name">Vestibulum. </p>
+                    <p class="money">$1,400</p>
+                    <p class="number">1</p>
+
+                </td>
+                <td class="total">
+                    <p>$2,200</p>
+                </td>
+                <td class="addtime">
+                    <p>2018/6/8
+                        13:39</p>
+                </td>
+                <td class="checktime">
+                    <p>
+                        2018/6/8
+                        20:23
+                    </p>
+                </td>
+                <td class="address">
+                    <p>386 Windler Drives
+                        Apt. 358</p>
+                </td>
+                <td class="phone"></td>
+                <td class="email"></td>
+                <td class="status">
+                    <select name="" class="status-option">
+                        <option value="">done</option>
+                    </select>
+                    <div class="statuslist">
+                        <p>paid</p>
+                        <p>unpaid</p>
+                        <p>shipping</p>
+                        <p>done</p>
+                    </div>
+                </td>
+
+            </tr>
+            <tr class="table-content" data-product=0>
+                <td class="id"></td>
+                <td class="customer"></td>
+                <td class="productlist">
+                    <p class="name">Fusce vehicu. </p>
+                    <p class="money">$800</p>
+                    <p class="number">1</p>
+                </td>
+                <td class="total"></td>
+                <td class="addtime"></td>
+                <td class="checktime"></td>
+                <td class="address"></td>
+                <td class="phone"></td>
+                <td class="email"></td>
+                <td class="status"></td>
+            </tr>
+            <tr class="table-content" data-product=1>
+                <td class="id"></td>
+                <td class="customer"><input type="checkbox">
+                    <p>Manuel Stephens</p>
+                </td>
+                <td class="productlist">
+                    <p class="name">Donec facili. </p>
+                    <p class="money">$1,400</p>
+                    <p class="number">1</p>
+                </td>
+                <td class="total">
+                    <p>$1,400</p>
+                </td>
+                <td class="addtime">
+                    <p>2018/6/8
+                        13:39</p>
+                </td>
+                <td class="checktime">
+                    <p>2018/6/8
+                        20:23</p>
+                </td>
+                <td class="address">
+                    <p>531 Orval Mission Suite 134</p>
+                </td>
+                <td class="phone"></td>
+                <td class="email"></td>
+                <td class="status" data-total=1>
+                    <select name="" class="status-option">
+                        <option value="">unpaid</option>
+                    </select>
+                    <div class="statuslist">
+                        <p>paid</p>
+                        <p>unpaid</p>
+                        <p>shipping</p>
+                        <p>done</p>
+                    </div>
+                </td>
+            </tr>
+            <tr class="table-content" data-product=2>
+                <td class="id"></td>
+                <td class="customer"><input type="checkbox">
+                    <p>Daisy Reynolds</p>
+                </td>
+                <td class="productlist">
+                    <p class="name">Curabitur lo. </p>
+                    <p class="money">$1,400</p>
+                    <p class="number">1</p>
+                </td>
+                <td class="total">
+                    <p>$3,000</p>
+                </td>
+                <td class="addtime">
+                    <p>2018/6/8
+                        13:39</p>
+                </td>
+                <td class="checktime">
+                    <p>2018/6/8
+                        20:23</p>
+                </td>
+                <td class="address">
+                    <p>38 Juston Islands Apt. 012</p>
+                </td>
+                <td class="phone"></td>
+                <td class="email"></td>
+                <td class="status" data-total=3>
+                    <select name="" class="status-option">
+                        <option value="">unpaid</option>
+                    </select>
+                    <div class="statuslist">
+                        <p>paid</p>
+                        <p>unpaid</p>
+                        <p>shipping</p>
+                        <p>done</p>
+                    </div>
+                </td>
+
+            <tr class="table-content" data-product=2>
+                <td class="id"></td>
+                <td class="customer"></td>
+                <td class="productlist">
+                    <p class="name">Donec facili. </p>
+                    <p class="money">$800</p>
+                    <p class="number">1</p>
+                </td>
+                <td class="total"></td>
+                <td class="addtime"></td>
+                <td class="checktime"></td>
+                <td class="address"></td>
+                <td class="phone"></td>
+                <td class="email"></td>
+                <td class="status"></td>
+            </tr>
+            <tr class="table-content" data-product=2>
+                <td class="id"></td>
+                <td class="customer"></td>
+                <td class="productlist">
+                    <p class="name">Nam porttito. </p>
+                    <p class="money">$800</p>
+                    <p class="number">1</p>
+                </td>
+                <td class="total"></td>
+                <td class="addtime"></td>
+                <td class="checktime"></td>
+                <td class="address"></td>
+                <td class="phone"></td>
+                <td class="email"></td>
+                <td class="status"></td>
+            </tr>
+            <tr class="table-content" data-product=3>
+                <td class="id"></td>
+                <td class="customer">
+                    <input type="checkbox">
+                    <p>Daisy Reynolds</p>
+                </td>
+                <td class="productlist">
+                    <p class="name">Lorem ipsum. </p>
+                    <p class="money">$1,400</p>
+                    <p class="number">1</p>
+                </td>
+                <td class="total">
+                    <p>$2,800</p>
+                </td>
+                <td class="addtime">
+                    <p>2018/6/8
+                        13:39</p>
+                </td>
+                <td class="checktime">
+                    <p>2018/6/8
+                        20:23</p>
+                </td>
+                <td class="address">
+                    <p>38 Juston Islands Apt. 012</p>
+                </td>
+                <td class="phone"></td>
+                <td class="email"></td>
+                <td class="status" data-total=2>
+                    <select name="" class="status-option">
+                        <option value="">unpaid</option>
+                    </select>
+                    <div class="statuslist">
+                        <p>paid</p>
+                        <p>unpaid</p>
+                        <p>shipping</p>
+                        <p>done</p>
+                    </div>
+                </td>
+
+            </tr>
+            <tr class="table-content " data-product=3>
+                <td class="id"></td>
+                <td class="customer"></td>
+                <td class="productlist">
+                    <p class="name">Nam porttito. </p>
+                    <p class="money">$1,400</p>
+                    <p class="number">1</p>
+                </td>
+                <td class="total"></td>
+                <td class="addtime"></td>
+                <td class="checktime"></td>
+                <td class="address"></td>
+                <td class="phone"></td>
+                <td class="email"></td>
+                <td class="status"></td>
+            </tr>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="js/order.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+.orderheader {
+  position: relative;
+  margin-bottom: 16px;
+  h2 {
+    @include text-hide;
+    height: 0px;
+  }
+  @include checkbox;
+  .fa-caret-down {
+    width: 9px;
+    height: 5px;
+    margin-right: 16px;
+    cursor: pointer;
+  }
+  .fa-tags {
+    margin-right: 730/1024 * 100%;
+    cursor: pointer;
+  }
+  .editsection {
+    display: inline-block;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .selectoption {
+    @extend %block-bg;
+    position: absolute;
+    z-index: 100;
+    width: 125px;
+    display: none;
+    left: 58px;
+    p {
+      height: 42px;
+      text-align: center;
+      padding: 16px 20px;
+      box-sizing: border-box;
+      cursor: pointer;
+      transition: all 0.8s;
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+  .tagoption {
+    @extend %block-bg;
+    width: 125px;
+    position: absolute;
+    z-index: 100;
+    left: 108px;
+    display: none;
+    p {
+      height: 42px;
+      text-align: center;
+      padding: 16px 20px;
+      box-sizing: border-box;
+      cursor: pointer;
+      transition: all 0.8s;
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+}
+.selectoption.show {
+  display: inherit;
+}
+.tagoption.show {
+  display: inherit;
+}
+// edit option
+.editoption {
+  position: absolute;
+  top: 26px;
+  left: 842px;
+  display: none;
+  @extend %block-bg;
+  box-sizing: border-box;
+  padding-top: 11px;
+  z-index: 100;
+  li {
+    cursor: pointer;
+    text-align: left;
+    width: 150px;
+    box-sizing: border-box;
+    padding-top: 8px;
+  }
+  input[type="checkbox"] {
+    margin-top: 4px;
+    margin-left: 20px;
+    margin-right: 8px;
+    margin-bottom: 19px;
+  }
+}
+.editoption.show {
+  display: inherit;
+}
+
+// table setting
+table {
+  width: 940px;
+  margin: 0 auto;
+  height: 40px;
+  margin-bottom: 30px;
+  tr:nth-child(1) {
+    background: white;
+  }
+}
+th {
+  box-sizing: border-box;
+  padding-top: 11px;
+  font-weight: bold;
+  display: none;
+  font-size: 16px;
+  // width: 10%;
+  background: white;
+  height: 40px;
+}
+.customer {
+  text-align: center;
+}
+td {
+  display: block;
+  box-sizing: border-box;
+  padding-top: 16px;
+  margin: 0 auto;
+  vertical-align: middle;
+  border-bottom: 1px solid white;
+  height: 67px;
+  width: 10%;
+  p {
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    line-height: 21px;
+  }
+  @include checkbox;
+  input[type="checkbox"] {
+    margin-left: 0px;
+  }
+}
+td.status {
+  text-align: center;
+}
+.productlist {
+  display: inline-block;
+  position: relative;
+  .name {
+    display: block;
+  }
+  .money {
+    color: #9b9b9b;
+    display: inline-block;
+  }
+  .number {
+    // text-align: right;
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+  }
+}
+@include width;
+.total {
+  @extend %tdp;
+}
+.addtime {
+  @extend %tdp;
+}
+.checktime {
+  @extend %tdp;
+}
+.status {
+  position: relative;
+}
+.status-option {
+  padding: 8px 16px;
+  height: 34px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 0 solid white;
+  outline: none;
+  border-radius: 4px;
+  text-transform: capitalize;
+  option {
+    display: none;
+  }
+}
+.statuslist {
+  @extend %block-bg;
+  width: 125px;
+  position: absolute;
+  z-index: 30;
+  right: 0;
+  top: 53px;
+  display: none;
+  p {
+    text-transform: capitalize;
+    display: block;
+    height: 42px;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding-top: 12px;
+    background: white;
+    width: 125px;
+    transition: all 0.8s;
+    font-size: 16px;
+    &:hover {
+      background: black;
+      color: white;
+    }
+  }
+}
+.statuslist.show {
+  display: inherit;
+}
+.done p {
+  text-decoration: line-through;
+}
+.done .statuslist p {
+  text-decoration: initial;
+}

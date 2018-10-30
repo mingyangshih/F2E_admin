@@ -1,0 +1,533 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.header .date-start, .header .date-end {
+  color: #9b9b9b;
+  border: 0px solid white;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.main li, .plot, .footer .left, .footer .right {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 10px 5px #ebebeb;
+  box-shadow: 0 0 10px 5px #ebebeb;
+  border-radius: 3px;
+}
+
+.facebook, .google, .amazon, .wordpress {
+  width: 385px;
+  margin: 0 auto;
+  border-bottom: 1px solid #ebebeb;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 23px;
+  position: relative;
+}
+
+.facebook i.fab, .google i.fab, .amazon i.fab, .wordpress i.fab {
+  font-size: 45px;
+  color: black;
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+.facebook .url, .google .url, .amazon .url, .wordpress .url {
+  color: #9b9b9b;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 16px;
+}
+
+.facebook .num, .google .num, .amazon .num, .wordpress .num {
+  font-size: 20px;
+  color: #000000;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 15px;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.facebook .fas, .google .fas, .amazon .fas, .wordpress .fas {
+  color: #7ed321;
+  font-size: 18px;
+  vertical-align: top;
+  margin-top: 16px;
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+.facebook .percent, .google .percent, .amazon .percent, .wordpress .percent {
+  color: #7ed321;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 17px;
+  font-weight: bold;
+}
+
+.facebook .detail, .google .detail, .amazon .detail, .wordpress .detail {
+  display: none;
+  position: absolute;
+  left: 256px;
+  top: -88px;
+  background: #000000;
+  border-radius: 3px;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  width: 186px;
+  height: 88px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 20px;
+}
+
+.facebook .detail span, .google .detail span, .amazon .detail span, .wordpress .detail span {
+  color: #7ed321;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.facebook .detail .this-week, .google .detail .this-week, .amazon .detail .this-week, .wordpress .detail .this-week {
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+
+.facebook .detail .last-week, .google .detail .last-week, .amazon .detail .last-week, .wordpress .detail .last-week {
+  color: #9b9b9b;
+}
+
+.detail.show {
+  display: inherit;
+}
+
+html {
+  background-color: #f2f2f2;
+}
+
+.wrap {
+  max-width: 1024px;
+  font-family: "Helvetica Nueue", Arial, Sans Serif;
+  margin: 0 auto;
+}
+
+.nav-list {
+  height: 70px;
+  background-color: #000000;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+.nav-list h1 {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 42px;
+  margin-right: 80px;
+  margin-top: 21px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.nav-list a {
+  display: inline-block;
+  color: #9b9b9b;
+  line-height: 62px;
+  text-decoration: none;
+  margin-right: 3.90625%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+
+.nav-list a:hover {
+  color: white;
+  border-bottom: 4px solid white;
+}
+
+.nav-list .admin {
+  display: inline-block;
+  font-weight: bold;
+  line-height: 19px;
+  margin-left: 36.1787%;
+  margin-right: 0;
+  color: white;
+}
+
+.header h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 42px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.header .date-start {
+  margin-left: 54.88281%;
+  width: 6.5%;
+  margin-right: 0.78125%;
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.header .date-end {
+  width: 6.6%;
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.header .arrow {
+  vertical-align: top;
+  font-size: 12px;
+  display: inline-block;
+  margin-top: 3px;
+  margin-right: 0.78125%;
+}
+
+.datelong {
+  display: inline-block;
+  position: relative;
+  float: right;
+  margin-right: 4.10156%;
+}
+
+.datelong ul {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  display: none;
+  height: 210px;
+}
+
+.datelong li {
+  width: 125px;
+  height: 42px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  -webkit-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+  background-color: white;
+}
+
+.datelong li:hover {
+  background-color: black;
+  color: white;
+}
+
+#date-long {
+  display: inline-block;
+  vertical-align: top;
+  color: #9b9b9b;
+  border: 0px solid white;
+  outline: none;
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+#date-long option {
+  color: black;
+  outline: none;
+  display: none;
+  border: 0px solid white;
+}
+
+.main {
+  margin-top: 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 42px;
+  margin-bottom: 18px;
+}
+
+.main li {
+  display: inline-block;
+  width: 300px;
+  height: 138px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.main li i {
+  font-size: 25px;
+  margin-right: 8px;
+  margin-left: 69px;
+  margin-top: 26px;
+  margin-bottom: 14px;
+}
+
+.main .title {
+  display: inline-block;
+  font-weight: bold;
+  text-align: top;
+  margin-bottom: 16px;
+}
+
+.main .money {
+  font-size: 36px;
+  margin-left: 95px;
+}
+
+.main li:nth-child(2),
+.main li:nth-child(3) {
+  margin-left: 1.95313%;
+}
+
+.plot {
+  max-width: 947px;
+  height: 406px;
+  margin-left: 4.10156%;
+  margin-bottom: 20px;
+  padding-left: 40px;
+  padding-top: 30px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.plot .act {
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.footer {
+  margin-bottom: 42px;
+}
+
+.footer .left {
+  width: 44.92188%;
+  margin-left: 4.19922%;
+  margin-right: 20px;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.footer .left .trans-web {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-left: 40px;
+  margin-bottom: 30px;
+}
+
+.footer .right {
+  width: 44.92188%;
+  height: 456px;
+  display: inline-block;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.footer .right .latest-order {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-left: 40px;
+  margin-bottom: 30px;
+  line-height: 24px;
+}
+
+.facebook i.fab {
+  margin-right: 20px;
+}
+
+.facebook .url {
+  margin-right: 62px;
+}
+
+.google i.fab {
+  margin-right: 16px;
+}
+
+.google .url {
+  margin-right: 85px;
+}
+
+.amazon i.fab {
+  margin-right: 18px;
+}
+
+.amazon .url {
+  margin-right: 87px;
+}
+
+.amazon .fas, .amazon .percent {
+  color: #D0021B;
+}
+
+.amazon .this-week span {
+  color: #D0021B;
+}
+
+.wordpress {
+  border: 0px solid black;
+}
+
+.wordpress i.fab {
+  margin-right: 12px;
+}
+
+.wordpress .url {
+  margin-right: 65px;
+}
+
+.wordpress .fas, .wordpress .percent {
+  color: #D0021B;
+}
+
+.wordpress .this-week span {
+  color: #D0021B;
+}
+
+.right .product {
+  position: relative;
+  display: inline-block;
+}
+
+.right .product .productdetail {
+  float: left;
+}
+
+.right img {
+  width: 100px;
+  height: 100px;
+  margin-left: 40px;
+  float: left;
+  margin-bottom: 19px;
+}
+
+.right .productname {
+  font-size: 20px;
+  color: #000000;
+  font-weight: bold;
+  display: block;
+  margin-top: 11px;
+  margin-left: 21px;
+  width: 100%;
+}
+
+.right .time {
+  font-size: 16px;
+  color: #9B9B9B;
+  display: inline-block;
+  margin-bottom: 11px;
+  position: relative;
+}
+
+.right .time span {
+  color: #000000;
+  position: absolute;
+  left: 227px;
+  top: 6px;
+}
+
+.right .time i {
+  font-size: 10px;
+  color: #757575;
+  margin-left: 23px;
+  margin-top: 13px;
+  margin-right: 7px;
+}
+
+.right .person {
+  font-size: 16px;
+  color: #9B9B9B;
+  position: relative;
+}
+
+.right .person i {
+  font-size: 18px;
+  color: #757575;
+  margin-left: 25px;
+  margin-right: 7px;
+}
+
+.right .person span {
+  font-size: 20px;
+  color: #000000;
+  font-weight: bold;
+  position: absolute;
+  left: 214px;
+  top: 0px;
+}
+
+.right .line {
+  width: 383px;
+  border-bottom: 1px solid #EBEBEB;
+  position: absolute;
+  top: 108px;
+  left: 40px;
+  margin-bottom: 8px;
+}
+
+.clear {
+  clear: both;
+}

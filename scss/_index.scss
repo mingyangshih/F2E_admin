@@ -1,0 +1,46 @@
+html {
+  background-color: #f2f2f2;
+}
+.wrap {
+  max-width: 1024px;
+  font-family: $font;
+  margin: 0 auto;
+}
+// nav
+.nav-list {
+  height: 70px;
+  background-color: #000000;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  h1 {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 42px;
+    margin-right: 80px;
+    margin-top: 21px;
+    box-sizing: border-box;
+  }
+  a {
+    display: inline-block;
+    color: #9b9b9b;
+    line-height: 62px;
+    text-decoration: none;
+    margin-right: 3.90625%;
+    box-sizing: border-box;
+    font-weight: bold;
+    &:hover {
+      color: white;
+      border-bottom: 4px solid white;
+    }
+  }
+  .admin {
+    display: inline-block;
+    font-weight: bold;
+    line-height: 19px;
+    margin-left: 36.1787%;
+    margin-right: 0;
+    color: white;
+  }
+}

@@ -1,0 +1,537 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.orderheader .selectoption, .orderheader .tagoption, .editoption, .statuslist {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 10px 5px #ebebeb;
+  box-shadow: 0 0 10px 5px #ebebeb;
+  border-radius: 3px;
+}
+
+.detail.show {
+  display: inherit;
+}
+
+.total p, .addtime p, .checktime p {
+  display: block;
+  text-align: center;
+}
+
+html {
+  background-color: #f2f2f2;
+}
+
+.wrap {
+  max-width: 1024px;
+  font-family: "Helvetica Nueue", Arial, Sans Serif;
+  margin: 0 auto;
+}
+
+.nav-list {
+  height: 70px;
+  background-color: #000000;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+.nav-list h1 {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 42px;
+  margin-right: 80px;
+  margin-top: 21px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.nav-list a {
+  display: inline-block;
+  color: #9b9b9b;
+  line-height: 62px;
+  text-decoration: none;
+  margin-right: 3.90625%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+
+.nav-list a:hover {
+  color: white;
+  border-bottom: 4px solid white;
+}
+
+.nav-list .admin {
+  display: inline-block;
+  font-weight: bold;
+  line-height: 19px;
+  margin-left: 36.1787%;
+  margin-right: 0;
+  color: white;
+}
+
+.orderheader {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.orderheader h2 {
+  white-space: nowrap;
+  text-indent: 100%;
+  overflow: hidden;
+  height: 0px;
+}
+
+.orderheader input[type="checkbox"] {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 0;
+  outline: none !important;
+  -webkit-appearance: normal;
+  margin-left: 58px;
+  margin-right: 5px;
+  margin-bottom: 11px;
+  margin-top: 2px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.orderheader input[type="checkbox"]::after {
+  display: inline-block;
+  content: "✔";
+  width: 15px;
+  height: 15px;
+  background: white;
+  vertical-align: middle;
+  border-radius: 2px;
+  color: white;
+  padding-left: 1.5px;
+  line-height: 14.5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #000000;
+  margin-top: -2px;
+}
+
+.orderheader input[type="checkbox"]:checked::after {
+  background: #000000;
+}
+
+.orderheader .fa-caret-down {
+  width: 9px;
+  height: 5px;
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.orderheader .fa-tags {
+  margin-right: 71.28906%;
+  cursor: pointer;
+}
+
+.orderheader .editsection {
+  display: inline-block;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.orderheader .selectoption {
+  position: absolute;
+  z-index: 100;
+  width: 125px;
+  display: none;
+  left: 58px;
+}
+
+.orderheader .selectoption p {
+  height: 42px;
+  text-align: center;
+  padding: 16px 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.orderheader .selectoption p:hover {
+  background-color: black;
+  color: white;
+}
+
+.orderheader .tagoption {
+  width: 125px;
+  position: absolute;
+  z-index: 100;
+  left: 108px;
+  display: none;
+}
+
+.orderheader .tagoption p {
+  height: 42px;
+  text-align: center;
+  padding: 16px 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.orderheader .tagoption p:hover {
+  background-color: black;
+  color: white;
+}
+
+.selectoption.show {
+  display: inherit;
+}
+
+.tagoption.show {
+  display: inherit;
+}
+
+.editoption {
+  position: absolute;
+  top: 26px;
+  left: 842px;
+  display: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 11px;
+  z-index: 100;
+}
+
+.editoption li {
+  cursor: pointer;
+  text-align: left;
+  width: 150px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 8px;
+}
+
+.editoption input[type="checkbox"] {
+  margin-top: 4px;
+  margin-left: 20px;
+  margin-right: 8px;
+  margin-bottom: 19px;
+}
+
+.editoption.show {
+  display: inherit;
+}
+
+table {
+  width: 940px;
+  margin: 0 auto;
+  height: 40px;
+  margin-bottom: 30px;
+}
+
+table tr:nth-child(1) {
+  background: white;
+}
+
+th {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 11px;
+  font-weight: bold;
+  display: none;
+  font-size: 16px;
+  background: white;
+  height: 40px;
+}
+
+.customer {
+  text-align: center;
+}
+
+td {
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 16px;
+  margin: 0 auto;
+  vertical-align: middle;
+  border-bottom: 1px solid white;
+  height: 67px;
+  width: 10%;
+}
+
+td p {
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 21px;
+}
+
+td input[type="checkbox"] {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 0;
+  outline: none !important;
+  -webkit-appearance: normal;
+  margin-left: 58px;
+  margin-right: 5px;
+  margin-bottom: 11px;
+  margin-top: 2px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+td input[type="checkbox"]::after {
+  display: inline-block;
+  content: "✔";
+  width: 15px;
+  height: 15px;
+  background: white;
+  vertical-align: middle;
+  border-radius: 2px;
+  color: white;
+  padding-left: 1.5px;
+  line-height: 14.5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #000000;
+  margin-top: -2px;
+}
+
+td input[type="checkbox"]:checked::after {
+  background: #000000;
+}
+
+td input[type="checkbox"] {
+  margin-left: 0px;
+}
+
+td.status {
+  text-align: center;
+}
+
+.productlist {
+  display: inline-block;
+  position: relative;
+}
+
+.productlist .name {
+  display: block;
+}
+
+.productlist .money {
+  color: #9b9b9b;
+  display: inline-block;
+}
+
+.productlist .number {
+  display: inline-block;
+  position: absolute;
+  right: 5px;
+}
+
+.table tr .id {
+  width: 65px;
+}
+
+.table tr th:nth-child(1) {
+  width: 65px;
+}
+
+.table tr .customer {
+  width: 145px;
+}
+
+.table tr th:nth-child(2) {
+  width: 145px;
+}
+
+.table tr .productlist {
+  width: 126px;
+}
+
+.table tr th:nth-child(3) {
+  width: 126px;
+}
+
+.table tr .total {
+  width: 60px;
+}
+
+.table tr th:nth-child(4) {
+  width: 60px;
+}
+
+.table tr .addtime {
+  width: 100px;
+}
+
+.table tr th:nth-child(5) {
+  width: 100px;
+}
+
+.table tr .checktime {
+  width: 90px;
+}
+
+.table tr th:nth-child(6) {
+  width: 90px;
+}
+
+.table tr .address {
+  width: 124px;
+}
+
+.table tr th:nth-child(7) {
+  width: 124px;
+}
+
+.table tr .phone {
+  width: 65px;
+}
+
+.table tr th:nth-child(8) {
+  width: 65px;
+}
+
+.table tr .email {
+  width: 65px;
+}
+
+.table tr th:nth-child(9) {
+  width: 65px;
+}
+
+.table tr .status {
+  width: 100px;
+}
+
+.table tr th:nth-child(10) {
+  width: 100px;
+}
+
+.status {
+  position: relative;
+}
+
+.status-option {
+  padding: 8px 16px;
+  height: 34px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 0 solid white;
+  outline: none;
+  border-radius: 4px;
+  text-transform: capitalize;
+}
+
+.status-option option {
+  display: none;
+}
+
+.statuslist {
+  width: 125px;
+  position: absolute;
+  z-index: 30;
+  right: 0;
+  top: 53px;
+  display: none;
+}
+
+.statuslist p {
+  text-transform: capitalize;
+  display: block;
+  height: 42px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding-top: 12px;
+  background: white;
+  width: 125px;
+  -webkit-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+  font-size: 16px;
+}
+
+.statuslist p:hover {
+  background: black;
+  color: white;
+}
+
+.statuslist.show {
+  display: inherit;
+}
+
+.done p {
+  text-decoration: line-through;
+}
+
+.done .statuslist p {
+  text-decoration: initial;
+}

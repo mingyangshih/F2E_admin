@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 使用編碼 -->
+    <meta charset="UTF-8">
+    <!-- 頁籤設定 -->
+    <title>F2E ADMIN</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <!-- RWD -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ie-edge 版本兼容 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--網站貼在Facebook上時顯示的資訊-->
+    <meta property="og:title" content="TheF2E Week3: Admin">
+    <meta property="og:description" content="Ming Yang's F2E 3th homework">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="images/F2E.jpg">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <nav class="nav-list">
+            <h1>Shoptime</h1>
+            <a href="index.html" class="home">HOME</a>
+            <a href="order.html">ORDERS</a>
+            <a href="#">PRODUCT</a>
+            <h3 href="#" class="admin">ADMIN</h3>
+        </nav>
+        <header class="header">
+            <h2>OVERVIEW</h2>
+            <input type="text" class="date-start" placeholder="01/01/2018">
+            <i class="arrow"></i>
+            <input type="text" value="12/31/2018" class="date-end">
+            <div class="datelong">
+                <select name="status" id="date-long">
+                    <option value="date-long" selected>Weekly</option>
+                </select>
+                <ul class="list">
+                    <li>Daily</li>
+                    <li>Weekly</li>
+                    <li>Monthly</li>
+                    <li>Yearly</li>
+                    <li>Custom</li>
+                </ul>
+            </div>
+        </header>
+        <main class="main">
+            <ul>
+                <li>
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <p class="title">TOTAL REVENUE</p>
+                    <p class="money">54,540</p>
+                </li>
+                <li>
+                    <i class="fas fa-boxes"></i>
+                    <p class="title">TOTAL COST</p>
+                    <p class="money">12,660</p>
+                </li>
+                <li>
+                    <i class="fas fa-money-bill"></i>
+                    <p class="title">NET INCOME</p>
+                    <p class="money">41,880</p>
+                </li>
+            </ul>
+        </main>
+        <main class="plot">
+            <p class="act">Activity</p>
+        </main>
+        <footer class="footer">
+            <div class="left">
+                <p class="trans-web">Transaction Website</p>
+                <div class="facebook">
+                    <i class="fab fa-facebook"></i>
+                    <p class="url">Facebook.com</p>
+                    <p class="num">45836</p>
+                    <i class="fas fa-arrow-up"></i>
+                    <p class="percent">20%</p>
+                    <div class="detail">
+                        <p class="this-week">INCREASE <span>899</span> VIEWS</p>
+                        <p class="last-week">last week: 44,937</p>
+                    </div>
+                </div>
+                <div class="google">
+                    <i class="fab fa-google"></i>
+                    <p class="url">google.com</p>
+                    <p class="num">23582</p>
+                    <i class="fas fa-arrow-up"></i>
+                    <p class="percent">12%</p>
+                    <div class="detail">
+                        <p class="this-week">INCREASE <span>899</span> VIEWS</p>
+                        <p class="last-week">last week: 44,937</p>
+                    </div>
+                </div>
+                <div class="amazon">
+                    <i class="fab fa-amazon"></i>
+                    <p class="url">amazon.com</p>
+                    <p class="num">2489</p>
+                    <i class="fas fa-arrow-down"></i>
+                    <p class="percent">15%</p>
+                    <div class="detail">
+                        <p class="this-week">DECREASE <span>899</span> VIEWS</p>
+                        <p class="last-week">last week: 44,937</p>
+                    </div>
+                </div>
+                <div class="wordpress">
+                    <i class="fab fa-wordpress"></i>
+                    <p class="url">Wordpress.com</p>
+                    <p class="num">1057</p>
+                    <i class="fas fa-arrow-down"></i>
+                    <p class="percent">30%</p>
+                    <div class="detail">
+                        <p class="this-week">DECREASE <span>899</span> VIEWS</p>
+                        <p class="last-week">last week: 44,937</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <p class="latest-order">
+                    Latest Orders
+                </p>
+                <div class="product">
+                    <img src="images/100.jpg" alt="product">
+                    <div class="productdetail">
+                        <p class="productname">Vintage T-shirt</p>
+                        <p class="time">
+                            <i class="fas fa-clock"></i>
+                            2018/6/13 13:42
+                            <span>Total</span>
+                        </p>
+                        <p class="person">
+                            <i class="fas fa-male"></i>
+                            Belle Willis
+                            <span>3,200</span>
+                        </p>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="clear"></div>
+                <div class="product">
+                    <img src="images/100.jpg" alt="product">
+                    <div class="productdetail">
+                        <p class="productname">Cowboy Jacket</p>
+                        <p class="time">
+                            <i class="fas fa-clock"></i>
+                            2018/6/13 10:45
+                            <span>Total</span>
+                        </p>
+                        <p class="person">
+                            <i class="fas fa-male"></i>
+                            Adrian Cummings
+                            <span>2,800</span>
+                        </p>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="clear"></div>
+                <div class="product">
+                    <img src="images/100.jpg" alt="product">
+                    <div class="productdetail">
+                        <p class="productname">Coach Coat</p>
+                        <p class="time">
+                            <i class="fas fa-clock"></i>
+                            2018/6/13 8:26
+                            <span>Total</span>
+                        </p>
+                        <p class="person">
+                            <i class="fas fa-male"></i>
+                            Lura Holland
+                            <span>1,600</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="js/all.js"></script>
+</body>
+
+</html>
