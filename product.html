@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 使用編碼 -->
+    <meta charset="UTF-8">
+    <!-- 頁籤設定 -->
+    <title>F2E ADMIN</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <!-- RWD -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ie-edge 版本兼容 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--網站貼在Facebook上時顯示的資訊-->
+    <meta property="og:title" content="TheF2E Week3: Admin">
+    <meta property="og:description" content="Ming Yang's F2E 3th homework">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="images/F2E.jpg">
+    <!-- css -->
+    <link rel="stylesheet" href="css/product.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<div class="wrap">
+    <nav class="nav-list">
+        <h1>Shoptime</h1>
+        <a href="index.html" class="home">HOME</a>
+        <a href="order.html" class="orders">ORDERS</a>
+        <a href="product.html" class="product">PRODUCT</a>
+        <h3 href="#" class="admin">ADMIN</h3>
+    </nav>
+    <header>
+        <h2>product</h2>
+        <input type="checkbox">
+        <i class="fas fa-caret-down"></i>
+        <i class="fas fa-tags"></i>
+        <p class="add">ADD NEW PRODUCT+</p>
+        <p class="change">Change Status</p>
+    </header>
+    <table class="table">
+        <tr class="table-head">
+            <th>
+                product
+            </th>
+            <th>
+                origin
+            </th>
+            <th>
+                discount
+            </th>
+            <th>
+                size
+            </th>
+            <th>
+                color
+            </th>
+            <th>
+                inventory
+            </th>
+            <th>
+                status
+            </th>
+        </tr>
+        <tr data-num=0>
+            <td class="product">
+                <input type="checkbox">
+                <img src="images/100.jpg" alt="">
+                <p>Mauris non tem.</p>
+            </td>
+            <td class="origin">
+                <p>$3,500</p>
+            </td>
+            <td class="discount">
+                <p>$2,800</p>
+            </td>
+            <td class="size">
+                <p>L</p>
+            </td>
+            <td class="color">
+                <p>Gray<br>
+                    Black</p>
+            </td>
+            <td class="inventory">
+                <p>15<br>
+                    20</p>
+            </td>
+            <td class="status"></td>
+        </tr>
+        <tr data-num=0>
+            <td class="product">
+            </td>
+            <td class="origin">
+            </td>
+            <td class="discount">
+            </td>
+            <td class="size">
+                <p>M</p>
+            </td>
+            <td class="color">
+                <p>Gray<br>
+                    Black</p>
+            </td>
+            <td class="inventory">
+                <p>15<br>
+                    20</p>
+            </td>
+            <td class="status"></td>
+        </tr>
+        <tr data-num=0>
+            <td class="product">
+            </td>
+            <td class="origin">
+            </td>
+            <td class="discount">
+            </td>
+            <td class="size">
+                <p>S</p>
+            </td>
+            <td class="color">
+                <p>Gray<br>
+                    Black</p>
+            </td>
+            <td class="inventory">
+                <p>15<br>
+                    20</p>
+            </td>
+            <td class="status">
+                <select id="status-select">
+                    <option value="published">published</option>
+                </select>
+                <div class="status-list">
+                    <p>published</p>
+                    <p>unpublished</p>
+                </div>
+            </td>
+        </tr>
+        <tr data-num=1>
+            <td class="product">
+                <input type="checkbox">
+                <img src="images/100.jpg" alt="">
+                <p>Mauris non tem.</p>
+            </td>
+            <td class="origin">
+                <p>$3,500</p>
+            </td>
+            <td class="discount">
+                <p>$2,800</p>
+            </td>
+            <td class="size">
+                <p>L</p>
+            </td>
+            <td class="color">
+                <p>Gray<br>
+                    Black</p>
+            </td>
+            <td class="inventory">
+                <p>15<br>
+                    20</p>
+            </td>
+            <td class="status"></td>
+        </tr>
+        <tr data-num=1>
+            <td class="product">
+            </td>
+            <td class="origin">
+            </td>
+            <td class="discount">
+            </td>
+            <td class="size">
+                <p>M</p>
+            </td>
+            <td class="color">
+                <p>Gray<br>
+                    Black</p>
+            </td>
+            <td class="inventory">
+                <p>15<br>
+                    20</p>
+            </td>
+            <td class="status"></td>
+        </tr>
+        <tr data-num=1>
+            <td class="product">
+            </td>
+            <td class="origin">
+            </td>
+            <td class="discount">
+            </td>
+            <td class="size">
+                <p>S</p>
+            </td>
+            <td class="color">
+                <p>Gray<br>
+                    Black</p>
+            </td>
+            <td class="inventory">
+                <p>15<br>
+                    20</p>
+            </td>
+            <td class="status">
+                <select id="status-select">
+                    <option value="published">published</option>
+                </select>
+                <div class="status-list">
+                    <p>published</p>
+                    <p>unpublished</p>
+                </div>
+            </td>
+        </tr>
+
+        <tr data-num=2>
+            <td class="product">
+                <input type="checkbox">
+                <img src="images/100.jpg" alt="">
+                <p>Mauris non tem.</p>
+            </td>
+            <td class="origin">
+                <p>$3,500</p>
+            </td>
+            <td class="discount">
+                <p>$2,800</p>
+            </td>
+            <td class="size">
+                <p>L</p>
+            </td>
+            <td class="color">
+                <p>Gray<br>
+                    Black</p>
+            </td>
+            <td class="inventory">
+                <p>15<br>
+                    20</p>
+            </td>
+            <td class="status"></td>
+        </tr>
+        <tr data-num=2>
+            <td class="product">
+            </td>
+            <td class="origin">
+            </td>
+            <td class="discount">
+            </td>
+            <td class="size">
+                <p>M</p>
+            </td>
+            <td class="color">
+                <p>Gray<br>
+                    Black</p>
+            </td>
+            <td class="inventory">
+                <p>15<br>
+                    20</p>
+            </td>
+            <td class="status"></td>
+        </tr>
+        <tr data-num=2>
+            <td class="product">
+            </td>
+            <td class="origin">
+            </td>
+            <td class="discount">
+            </td>
+            <td class="size">
+                <p>S</p>
+            </td>
+            <td class="color">
+                <p>Gray<br>
+                    Black</p>
+            </td>
+            <td class="inventory">
+                <p>15<br>
+                    20</p>
+            </td>
+            <td class="status">
+                <select id="status-select">
+                    <option value="published">published</option>
+                </select>
+                <div class="status-list">
+                    <p>published</p>
+                    <p>unpublished</p>
+                </div>
+            </td>
+
+        </tr>
+    </table>
+
+    <div class="addnewproduct">
+        <h1 class="title">
+            ADD NEW PRODUCT
+            <i class="fas fa-times"></i>
+        </h1>
+        <div class="addwrap">
+            <div class="left">
+                <div class="upload-image">
+                    <label for="upload">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </label>
+                    <input type="file" id="upload">
+                    <p>Drag an image or click here to upload…</p>
+                </div>
+                <div class="image">
+                    <img src="images/100.jpg" alt="">
+                    <img src="images/100.jpg" alt="">
+                    <img src="images/100.jpg" alt="">
+                    <img src="images/100.jpg" alt="">
+                    <img src="images/100.jpg" alt="">
+                </div>
+            </div>
+            <div class="right">
+                <p class="product-description">Product Discription</p>
+                <input type="text" placeholder="Vestibulum nec" class="name">
+                <input type="text" placeholder="product detail..." class="detail">
+
+                <div class="originalbox">
+                    <p class="price">Price</p>
+                    <label for="original" class="original">Original</label>
+                    <input type="text" id="original">
+                    <label for="discount" class="discount">Discount</label>
+                    <input type="text" id="discount">
+                </div>
+                <div class="clear"></div>
+
+                <div class="specificbox">
+                    <p class="specification">Specification</p>
+                    <label for="size" class="size">Size</label>
+                    <input type="text" id="size">
+                    <label for="color" class="color">Color</label>
+                    <input type="text" id="color">
+                    <label for="inventory" class="Inventory">Inventory</label>
+                    <input type="text" id="inventory">
+                </div>
+
+                <div class="clear"></div>
+                <input type="button" value="ADD NEW SPECIFICATION +" class="addbutton">
+                <input type="button" value="SAVE DRAFT" id="save">
+                <input type="button" value="PUBLISH" id="publish">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/product.js"></script>
+
+<body>
+
+</body>
+
+</html>

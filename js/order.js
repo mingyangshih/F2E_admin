@@ -21,7 +21,7 @@ fatag.addEventListener("click", function() {
   let tagoption = document.querySelector(".tagoption");
   tagoption.classList.toggle("show");
 });
-// choose all ...................effect
+// choose all ...................effect下拉
 for (let i = 0; i < selectoption_p.length; i++) {
   selectoption_p[i].addEventListener("click", function(e) {
     let seloption = document.querySelector(".selectoption");
@@ -42,13 +42,14 @@ for (let i = 0; i < tagoption_p.length; i++) {
   });
 }
 
-let tdinput = document.querySelectorAll(".customer input");
-for (let i = 0; i < tdinput.length; i++) {
-  tdinput[i].addEventListener("click", function(e) {
-    if (tdinput[i].checked == true) {
-      tdinput[i].setAttribute("checked", "checked");
+let customer_input = document.querySelectorAll(".customer input");
+for (let i = 0; i < customer_input.length; i++) {
+  customer_input[i].addEventListener("click", function(e) {
+    // e.preventDefault();
+    if (customer_input[i].checked == true) {
+      customer_input[i].checked = true;
     } else {
-      tdinput[i].removeAttribute("checked");
+      customer_input[i].checked = false;
     }
   });
 }
@@ -58,11 +59,11 @@ headerinput.addEventListener("click", function() {
   let customer_input = document.querySelectorAll(".customer input");
   if (headerinput.checked == true) {
     for (let j = 0; j < customer_input.length; j++) {
-      customer_input[j].setAttribute("checked", "checked");
+      customer_input[j].checked = true;
     }
   } else if (headerinput.checked == false) {
     for (let j = 0; j < customer_input.length; j++) {
-      customer_input[j].removeAttribute("checked");
+      customer_input[j].checked = false;
     }
   }
 });
@@ -73,38 +74,38 @@ function chooseeffect(el) {
 
   if (el == "Select All") {
     for (let j = 0; j < customer_input.length; j++) {
-      customer_input[j].setAttribute("checked", "checked");
+      customer_input[j].checked = true;
     }
   } else if (el == "Unselect All") {
     for (let j = 0; j < customer_input.length; j++) {
-      customer_input[j].removeAttribute("checked", "checked");
+      customer_input[j].checked = false;
     }
   } else if (el == "Paid") {
     for (let j = 0; j < optiontext.length; j++) {
-      customer_input[j].removeAttribute("checked", "checked");
+      customer_input[j].checked = false;
       if (optiontext[j].textContent == "paid") {
-        customer_input[j].setAttribute("checked", "checked");
+        customer_input[j].checked = true;
       }
     }
   } else if (el == "Unpaid") {
     for (let j = 0; j < optiontext.length; j++) {
-      customer_input[j].removeAttribute("checked", "checked");
+      customer_input[j].checked = false;
       if (optiontext[j].textContent == "unpaid") {
-        customer_input[j].setAttribute("checked", "checked");
+        customer_input[j].checked = true;
       }
     }
   } else if (el == "Shipping") {
     for (let j = 0; j < optiontext.length; j++) {
-      customer_input[j].removeAttribute("checked", "checked");
+      customer_input[j].checked = false;
       if (optiontext[j].textContent == "shipping") {
-        customer_input[j].setAttribute("checked", "checked");
+        customer_input[j].checked = true;
       }
     }
   } else if (el == "Done") {
     for (let j = 0; j < optiontext.length; j++) {
-      customer_input[j].removeAttribute("checked", "checked");
+      customer_input[j].checked = false;
       if (optiontext[j].textContent == "done") {
-        customer_input[j].setAttribute("checked", "checked");
+        customer_input[j].checked = true;
       }
     }
   }
@@ -175,7 +176,8 @@ function editcheck() {
   }
 }
 
-// status color renew everytime
+// status color renew everytime (local storage save change)
+// storestatus();
 setstatus();
 checkcolor();
 
@@ -255,7 +257,7 @@ function statuseffect() {
 }
 // store status to local storage
 function storestatus() {
-  let DATA_store = [];
+  let DATA_store = []; //JSON.parse(localStorage.getItem("listDATA")) ||
   let optiontext = document.querySelectorAll(".status-option option");
   for (let i = 0; i < optiontext.length; i++) {
     DATA_store.push(optiontext[i].textContent);
@@ -263,9 +265,17 @@ function storestatus() {
   }
 }
 function setstatus() {
-  let statusdata = JSON.parse(localStorage.getItem("listDATA"));
+  let statusdata = JSON.parse(localStorage.getItem("listDATA")) || [];
   let optiontext = document.querySelectorAll(".status-option option");
-  for (let i = 0; i < optiontext.length; i++) {
-    optiontext[i].innerHTML = `${statusdata[i]}`;
+  if (statusdata.length == 0) {
+    storestatus();
+    statusdata = JSON.parse(localStorage.getItem("listDATA"));
+    for (let i = 0; i < statusdata.length; i++) {
+      optiontext[i].innerHTML = `${statusdata[i]}`;
+    }
+  } else {
+    for (let i = 0; i < optiontext.length; i++) {
+      optiontext[i].innerHTML = `${statusdata[i]}`;
+    }
   }
 }

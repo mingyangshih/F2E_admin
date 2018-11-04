@@ -136,7 +136,7 @@ $font: "Helvetica Nueue", Arial, Sans Serif;
   }
 }
 
-// 用for 設定寬度
+// 用for 設定寬度 (order)
 @mixin width {
   $width: 65px 145px 126px 60px 100px 90px 124px 65px 65px 100px;
   $class: "id" "customer" "productlist" "total" "addtime" "checktime" "address"
@@ -150,5 +150,35 @@ $font: "Helvetica Nueue", Arial, Sans Serif;
         width: nth($width, $i);
       }
     }
+  }
+}
+// 用for 設定寬度 (product)
+@mixin widthproduct {
+  $width: 210px 113px 133px 78px 92px 122px 192px;
+  $class: "product" "origin" "discount" "size" "color" "inventory" "status";
+  @for $i from 1 through 7 {
+    td.#{nth($class,$i)} {
+      width: nth($width, $i);
+      height: 80px;
+    }
+    tr th:nth-child(#{$i}) {
+      width: nth($width, $i);
+    }
+  }
+}
+
+// product label
+@mixin label {
+  label {
+    box-sizing: border-box;
+    line-height: 24px;
+    height: 38px;
+    padding: 7px 16px;
+    float: left;
+    background: #ebebeb;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    color: #55595c;
+    // margin-bottom: 8px;
   }
 }

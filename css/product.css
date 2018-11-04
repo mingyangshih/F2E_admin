@@ -1,0 +1,689 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.status-list {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 10px 5px #ebebeb;
+  box-shadow: 0 0 10px 5px #ebebeb;
+  border-radius: 3px;
+}
+
+.detail.show {
+  display: inherit;
+}
+
+html {
+  background-color: #f2f2f2;
+}
+
+.wrap {
+  max-width: 1024px;
+  font-family: "Helvetica Nueue", Arial, Sans Serif;
+  margin: 0 auto;
+}
+
+.nav-list {
+  height: 70px;
+  background-color: #000000;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+.nav-list h1 {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 42px;
+  margin-right: 80px;
+  margin-top: 21px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.nav-list a {
+  display: inline-block;
+  color: #9b9b9b;
+  line-height: 62px;
+  text-decoration: none;
+  margin-right: 3.90625%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+
+.nav-list a:hover {
+  color: white;
+  border-bottom: 4px solid white;
+}
+
+.nav-list .admin {
+  display: inline-block;
+  font-weight: bold;
+  line-height: 19px;
+  margin-left: 36.1787%;
+  margin-right: 0;
+  color: white;
+}
+
+.wrap {
+  position: relative;
+}
+
+header {
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 5;
+}
+
+header h2 {
+  height: 0;
+  white-space: nowrap;
+  text-indent: 100%;
+  overflow: hidden;
+}
+
+header input[type="checkbox"] {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 0;
+  outline: none !important;
+  -webkit-appearance: normal;
+  margin-left: 58px;
+  margin-right: 5px;
+  margin-bottom: 11px;
+  margin-top: 2px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+header input[type="checkbox"]::after {
+  display: inline-block;
+  content: "✔";
+  width: 15px;
+  height: 15px;
+  background: white;
+  vertical-align: middle;
+  border-radius: 2px;
+  color: white;
+  padding-left: 1.5px;
+  line-height: 14.5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #000000;
+  margin-top: -2px;
+}
+
+header input[type="checkbox"]:checked::after {
+  background: #000000;
+}
+
+header input[type="checkbox"] {
+  margin-top: 17px;
+}
+
+header .fa-caret-down {
+  margin-right: 16px;
+  display: inline-block;
+  width: 16px;
+}
+
+header .fa-tags {
+  margin-right: 646px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+header .add {
+  display: inline-block;
+  font-size: 14px;
+  width: 192px;
+  height: 34px;
+  vertical-align: top;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #000000;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  color: white;
+  line-height: 18px;
+  font-weight: bold;
+  padding-top: 8px;
+  cursor: pointer;
+}
+
+.change {
+  position: absolute;
+  display: none;
+  background: #000000;
+  border: 1px solid #000000;
+  border-radius: 2px;
+  color: white;
+  width: 109px;
+  padding: 4px 8px;
+  left: 66px;
+  top: 45px;
+  z-index: 33;
+}
+
+.header-tag-show .change {
+  display: inherit;
+}
+
+table {
+  width: 940px;
+  margin: 0 auto;
+}
+
+table th {
+  text-transform: capitalize;
+  background: white;
+  font-weight: bold;
+  font-size: 16px;
+  height: 40px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 8px;
+  line-height: 19px;
+}
+
+table input[type="checkbox"] {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 0;
+  outline: none !important;
+  -webkit-appearance: normal;
+  margin-left: 58px;
+  margin-right: 5px;
+  margin-bottom: 11px;
+  margin-top: 2px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+table input[type="checkbox"]::after {
+  display: inline-block;
+  content: "✔";
+  width: 15px;
+  height: 15px;
+  background: white;
+  vertical-align: middle;
+  border-radius: 2px;
+  color: white;
+  padding-left: 1.5px;
+  line-height: 14.5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #000000;
+  margin-top: -2px;
+}
+
+table input[type="checkbox"]:checked::after {
+  background: #000000;
+}
+
+table input[type="checkbox"] {
+  margin-left: 16px;
+  margin-right: 5px;
+  margin-top: 36px;
+  vertical-align: top;
+}
+
+table input[type="checkbox"]::after {
+  border: 0px solid black;
+  line-height: 15.5px;
+}
+
+table input[type="checkbox"]:checked::after {
+  background: #9b9b9b;
+}
+
+td.product {
+  width: 210px;
+  height: 80px;
+}
+
+tr th:nth-child(1) {
+  width: 210px;
+}
+
+td.origin {
+  width: 113px;
+  height: 80px;
+}
+
+tr th:nth-child(2) {
+  width: 113px;
+}
+
+td.discount {
+  width: 133px;
+  height: 80px;
+}
+
+tr th:nth-child(3) {
+  width: 133px;
+}
+
+td.size {
+  width: 78px;
+  height: 80px;
+}
+
+tr th:nth-child(4) {
+  width: 78px;
+}
+
+td.color {
+  width: 92px;
+  height: 80px;
+}
+
+tr th:nth-child(5) {
+  width: 92px;
+}
+
+td.inventory {
+  width: 122px;
+  height: 80px;
+}
+
+tr th:nth-child(6) {
+  width: 122px;
+}
+
+td.status {
+  width: 192px;
+  height: 80px;
+}
+
+tr th:nth-child(7) {
+  width: 192px;
+}
+
+tr td {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: top;
+  text-align: center;
+}
+
+tr td img {
+  width: 50px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+tr td p {
+  font-size: 14px;
+  margin-top: 33px;
+  line-height: 21px;
+}
+
+.product p {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 8px;
+}
+
+.size,
+.color,
+.inventory {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 1px solid white;
+}
+
+.status {
+  position: relative;
+}
+
+#status-select {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 34px;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background: #7ed321;
+  border: 1px solid #7ed321;
+  border-radius: 4px;
+  color: white;
+  padding: 8px 16px;
+  outline: none;
+  margin-top: 38px;
+}
+
+#status-select option {
+  display: none;
+}
+
+.status-list {
+  width: 135px;
+  position: absolute;
+  left: 30px;
+  top: 75px;
+  z-index: 99;
+  display: none;
+}
+
+.status-list.show {
+  display: inherit;
+}
+
+.status-list.show p {
+  text-transform: uppercase;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 34px;
+  text-align: center;
+  padding-top: 8px;
+  margin-top: 0;
+  margin-left: 0;
+  -webkit-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+  cursor: pointer;
+}
+
+.status-list.show p:hover {
+  background: black;
+  color: white;
+}
+
+.addwrap {
+  margin-bottom: 50px;
+}
+
+.addnewproduct {
+  margin: 0 auto;
+  width: 1024px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 91px;
+  padding-left: 42px;
+  padding-right: 42px;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  display: none;
+}
+
+.addnewproduct.show {
+  display: inherit;
+}
+
+.title {
+  color: white;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 19px;
+  padding-left: 35px;
+  padding-bottom: 17px;
+  font-size: 24px;
+  line-height: 28px;
+  width: 940px;
+  z-index: 100;
+  background-color: black;
+  border-radius: 4px 4px 0 0;
+  font-weight: bold;
+}
+
+.title i {
+  margin-left: 613px;
+  cursor: pointer;
+}
+
+.addwrap {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 30px;
+  background: #ffffff;
+  width: 940px;
+}
+
+.left {
+  width: 450px;
+  display: inline-block;
+}
+
+.left .upload-image {
+  width: 394px;
+  height: 115px;
+  background: #ebebeb;
+  color: #757575;
+  margin-bottom: 8px;
+  margin-left: 30px;
+}
+
+.left .upload-image input {
+  display: none;
+}
+
+.left .upload-image i {
+  font-size: 48px;
+  margin-top: 25px;
+  margin-left: 159px;
+  cursor: pointer;
+}
+
+.left .upload-image p {
+  line-height: 24px;
+  font-weight: bold;
+  margin-left: 46px;
+}
+
+.left .image {
+  width: 394px;
+  margin-left: 30px;
+}
+
+.left .image img {
+  width: 126px;
+}
+
+.right {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 485px;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.right .product-description,
+.right .price {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.right input[type="text"] {
+  width: 456px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  line-height: 24px;
+  font-size: 16px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 16px;
+  outline: none;
+  color: #120e1a;
+}
+
+.right input[type="text"]:focus {
+  background: #edf1e5;
+}
+
+.right .name {
+  height: 38px;
+  margin-bottom: 8px;
+}
+
+.right .detail {
+  height: 172px;
+  margin-bottom: 20px;
+}
+
+.right .originalbox label {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 24px;
+  height: 38px;
+  padding: 7px 16px;
+  float: left;
+  background: #ebebeb;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  color: #55595c;
+}
+
+.right .originalbox .discount {
+  margin-left: 8px;
+}
+
+.right .originalbox #original,
+.right .originalbox #discount {
+  display: inline-block;
+  width: 98px;
+  float: left;
+  height: 38px;
+}
+
+.right .clear {
+  clear: both;
+}
+
+.right .specificbox label {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 24px;
+  height: 38px;
+  padding: 7px 16px;
+  float: left;
+  background: #ebebeb;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  color: #55595c;
+}
+
+.right .specificbox .specification {
+  margin-top: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.right .specificbox #size,
+.right .specificbox #color,
+.right .specificbox #inventory {
+  width: 60px;
+  height: 38px;
+  padding: 0px;
+  text-align: center;
+  float: left;
+  margin-right: 8px;
+}
+
+.right input[type="button"] {
+  width: 434px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #000000;
+  color: white;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  line-height: 24px;
+  padding: 8px 0;
+  font-weight: bold;
+  margin-top: 8px;
+  margin-bottom: 30px;
+}
+
+.right #save {
+  width: 110px;
+  background: white;
+  color: #757575;
+  float: left;
+  border: 0px solid #757575;
+  margin-left: 215px;
+}
+
+.right #save:hover {
+  background: black;
+  color: white;
+}
+
+.right #publish {
+  width: 110px;
+  float: left;
+  background: white;
+  color: #757575;
+  border: 0px solid #757575;
+}
+
+.right #publish:hover {
+  background: black;
+  color: white;
+}
