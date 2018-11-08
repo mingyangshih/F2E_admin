@@ -103,6 +103,9 @@ tr td {
     font-size: 14px;
     margin-top: 33px;
     line-height: 21px;
+    span {
+      display: block;
+    }
   }
 }
 .product {
@@ -311,6 +314,9 @@ tr td {
       text-align: center;
       float: left;
       margin-right: 8px;
+    }
+    #size {
+      outline: none;
     }
   }
   input[type="button"] {

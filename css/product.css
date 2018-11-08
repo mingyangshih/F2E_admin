@@ -381,6 +381,10 @@ tr td p {
   line-height: 21px;
 }
 
+tr td p span {
+  display: block;
+}
+
 .product p {
   display: inline-block;
   vertical-align: top;
@@ -642,6 +646,10 @@ tr td p {
   text-align: center;
   float: left;
   margin-right: 8px;
+}
+
+.right .specificbox #size {
+  outline: none;
 }
 
 .right input[type="button"] {

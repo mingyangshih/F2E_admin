@@ -212,7 +212,6 @@
                 </div>
             </td>
         </tr>
-
         <tr data-num=2>
             <td class="product">
                 <input type="checkbox">
@@ -269,8 +268,10 @@
                 <p>S</p>
             </td>
             <td class="color">
-                <p>Gray<br>
-                    Black</p>
+                <p>
+                    <span>Gray</span>
+                    <span>Black</span>
+                </p>
             </td>
             <td class="inventory">
                 <p>15<br>
@@ -324,17 +325,21 @@
                     <input type="text" id="discount">
                 </div>
                 <div class="clear"></div>
-
-                <div class="specificbox">
-                    <p class="specification">Specification</p>
-                    <label for="size" class="size">Size</label>
-                    <input type="text" id="size">
-                    <label for="color" class="color">Color</label>
-                    <input type="text" id="color">
-                    <label for="inventory" class="Inventory">Inventory</label>
-                    <input type="text" id="inventory">
+                <div class="specificbox-set">
+                    <div class="specificbox">
+                        <p class="specification">Specification</p>
+                        <label for="size" class="size">Size</label>
+                        <select id="size">
+                            <option value="L">L</option>
+                            <option value="M">M</option>
+                            <option value="S">S</option>
+                        </select>
+                        <label for="color" class="color">Color</label>
+                        <input type="text" id="color">
+                        <label for="inventory" class="Inventory">Inventory</label>
+                        <input type="text" id="inventory">
+                    </div>
                 </div>
-
                 <div class="clear"></div>
                 <input type="button" value="ADD NEW SPECIFICATION +" class="addbutton">
                 <input type="button" value="SAVE DRAFT" id="save">
